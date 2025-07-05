@@ -18,12 +18,25 @@ Urban parking is often underutilized or overcrowded due to static pricing. In th
 
 ## 🧠 Architecture Diagram
 
-```mermaid
-flowchart TD
-    A[dataset.csv] --> B[Pathway Stream Processor]
-    B --> C[Feature Extraction]
-    C --> D1[Model 1: Linear Pricing]
-    C --> D2[Model 2: Demand-based Pricing]
-    D1 --> E[Real-time Pricing Output]
-    D2 --> E
-    E --> F[Bokeh Visualization]
+![Architecture](diagram.png)
+
+## 🔍 Workflow
+
+1. ✅ Load dataset and clean
+2. ✅ Use Pathway to stream the data in real time
+3. ✅ Extract relevant features (occupancy, queue length, traffic, etc.)
+4. ✅ Apply pricing logic using:
+   - Model 1: Linear pricing based on occupancy
+   - Model 2: Advanced demand-based pricing
+5. ✅ Visualize pricing trends using Bokeh
+
+## 📁 Folder Structure
+dynamic-parking-pricing/
+├── cleaned_dataset.csv
+├── pricing_model.ipynb
+├── README.md
+├── diagram.png
+└── report.pdf
+
+Created by Yatharth Bhatt
+Email: yatharthbhattofficial@gmail.com
